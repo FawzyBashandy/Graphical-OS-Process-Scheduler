@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ImageView fitHeight="917.0" fitWidth="1645.0" layoutX="-365.0" layoutY="-117.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../giphy.gif" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.32" />
+         </effect>
+      </ImageView>
+      <Text fill="WHITE" layoutX="519.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SJF Scheduler" textAlignment="CENTER" wrappingWidth="229.53668212890625">
+         <font>
+            <Font name="Bauhaus 93" size="42.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="AlgMenu" layoutX="543.0" layoutY="207.0" onAction="#method" prefHeight="46.0" prefWidth="182.0" promptText="Select Algorithm" style="-fx-background-radius: 30px; -fx-background-color: white;" visibleRowCount="2" />
+      <TextField fx:id="NumberField" layoutX="60.0" layoutY="348.0" onAction="#GetNumber" prefHeight="46.0" prefWidth="181.0" promptText="Enter Number of processes" style="-fx-background-radius: 10em; -fx-background-color: WHITE;" />
+      <TextField fx:id="processNumberField" layoutX="60.0" layoutY="426.0" prefHeight="46.0" prefWidth="181.0" promptText="Process ID" style="-fx-background-color: WHITE;" />
+      <TextField fx:id="arrivalTimeField" layoutX="60.0" layoutY="503.0" prefHeight="46.0" prefWidth="181.0" promptText="Arrival Time" style="-fx-background-color: WHITE;" />
+      <TextField fx:id="burstTimeField" layoutX="60.0" layoutY="579.0" prefHeight="46.0" prefWidth="181.0" promptText="Burst Time" style="-fx-background-color: WHITE;" />
+      <Text fill="#91b9ff" layoutX="32.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No. Of Procceses" textAlignment="CENTER" wrappingWidth="237.00000478187576">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="AddButton" layoutX="924.0" layoutY="179.0" mnemonicParsing="false" onAction="#AddProcess" prefHeight="102.0" prefWidth="284.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-color: #91b9ff; -fx-border-radius: 5em;" text="Add Process" textFill="#91b9ff">
+         <font>
+            <Font name="Arial Black" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="ResetButton" layoutX="924.0" layoutY="323.0" mnemonicParsing="false" onAction="#ResetButtonPressed" prefHeight="95.0" prefWidth="284.0" style="-fx-background-color: #91b9ff; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="StartButton" layoutX="446.0" layoutY="670.0" mnemonicParsing="false" onAction="#StartButtonPressed" prefHeight="95.0" prefWidth="388.0" style="-fx-background-color: #91b9ff; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;" text="Start Scheduling" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="45.0" />
+         </font>
+      </Button>
+      <Button fx:id="ShowButton" layoutX="924.0" layoutY="455.0" mnemonicParsing="false" onAction="#showTable" prefHeight="95.0" prefWidth="284.0" style="-fx-background-color: white; -fx-background-radius: 5em; -fx-border-radius: 5em; -fx-border-color: #91b9ff;" text="Show Processes" textFill="#91b9ff">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Button>
+      <Accordion layoutX="167.0" layoutY="135.0" />
+      <Button fx:id="quit" layoutX="32.0" layoutY="676.0" mnemonicParsing="false" onAction="#quit" prefHeight="83.0" prefWidth="143.0" style="-fx-background-color: #91b9ff; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;" text="QUIT" textFill="WHITE">
+         <font>
+            <Font name="Bauhaus 93" size="35.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="area" layoutX="488.0" layoutY="329.0" prefHeight="178.0" prefWidth="291.0" promptText="Expected Wait Time " />
+      <Button fx:id="AverageButton" layoutX="924.0" layoutY="578.0" mnemonicParsing="false" onAction="#ComputeAverage" prefHeight="95.0" prefWidth="284.0" style="-fx-background-color: #91b9ff; -fx-background-radius: 5em; -fx-border-color: white; -fx-border-radius: 5em;" text="Compute Average Waiting" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
